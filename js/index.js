@@ -1,19 +1,19 @@
-
-AWSCognito.config.region = 'LOCATION';
-    var identityPoolId = 'identityPoolId';
+AWSCognito.config.region = 'us-east-1';
+    var identityPoolId = 'us-east-1:67ad78ba-c5ea-4f78-be7b-e99bb2e0974d';
     var poolData = {
-            UserPoolId : 'userpoolID,
-            ClientId : 'clientID'
+            UserPoolId : 'us-east-1_GeloAvylw',
+            ClientId : '3p55l1bg9gc4ano3sahd8qdn81'
         };
     var userPool =  new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(poolData);
     var uname;
     var coguser,auth2;
-
+    var id_token;
+    var profile;
 
     function onSignInSuccess(user) {
       // if (clicked) {
-      var id_token = user.getAuthResponse().id_token;
-      var profile = user.getBasicProfile();
+      id_token = user.getAuthResponse().id_token;
+      profile = user.getBasicProfile();
       console.log('token' + id_token);
       console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
       console.log('Name: ' + profile.getName());

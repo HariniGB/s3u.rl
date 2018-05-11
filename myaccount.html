@@ -16,10 +16,10 @@
                                         <script src="js/lib/aws-cognito-sdk.min.js"></script>
                                         <script src="js/lib/amazon-cognito-identity.min.js"></script>
                                         <script src="https://apis.google.com/js/platform.js" async defer></script>
-                                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                         <meta name="google-signin-client_id" content="642273503260-4l3qkb0s2m4roaanl2ka28n8umilheg1.apps.googleusercontent.com">
                                             <link rel="stylesheet" type="text/css" href="css/main.css">
                                                 <script type="text/javascript" src="js/index.js"></script>
+                                                <script type="text/javascript" src="js/widgets.js"></script>
                                                 </head>
     <body id="home">
         <!-- ################################################################################################ -->
@@ -66,6 +66,7 @@
                                 </table>
                             </div>
                             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             <script>
                                 $(document).ready(function(){
                                                   $.ajax({
@@ -83,7 +84,7 @@
                                                                 trHTML +=  '<tr><td class="groupID">' + o.sURL +
                                                                 '</td>'+'<td id="'+o.id+'"><a target="_blank" href="'+o.oURL+'">'+o.oURL+'</a>' +
                                                                 '</td><td><a target="_blank" href="'+o.oURL+'">http://s3u.rl/' + o.sURL +'</a>'+
-                                                                '</td><td><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" data-size="large" data-text="{{o.sURL}}"data-url="{{o.sURL}}" data-hashtags="Generate your short ,simple url and share " data-via="S3URL" data-related="twitterapi, twitter"> Tweet </a>'+
+                                                                '</td><td><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large"> Tweet</a>'+
                                                                 '</td><td id="'+o.id+'"><input type="button" class="delete" value="Delete" id="deleteRow">'+
                                                                 '</td></tr>'
                                                                 ;
