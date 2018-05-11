@@ -1,8 +1,8 @@
-AWSCognito.config.region = 'us-east-1';
-    var identityPoolId = 'us-east-1:67ad78ba-c5ea-4f78-be7b-e99bb2e0974d';
+AWSCognito.config.region = '';
+    var identityPoolId = '';
     var poolData = {
-            UserPoolId : 'us-east-1_GeloAvylw',
-            ClientId : '3p55l1bg9gc4ano3sahd8qdn81'
+            UserPoolId : '',
+            ClientId : ''
         };
     var userPool =  new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(poolData);
     var uname;
@@ -27,7 +27,7 @@ AWSCognito.config.region = 'us-east-1';
      });
       AWS.config.credentials.get(function(){
         // Access AWS resources here.
-           uname=profile.getName();
+           uname = profile.getName();
            $('.uname').html(uname);
            alert("Successfully Loggedin")
            $('#logout').show();
